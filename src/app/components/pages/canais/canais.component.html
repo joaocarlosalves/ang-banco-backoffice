@@ -1,0 +1,34 @@
+<div class="row">
+  <h1>Lista de Canais</h1>
+
+  <div class="col-96">
+    <ul class="list-canais" ng-model="canais" *ngIf="msgEmptyListCanais === false">
+      <li *ngFor="let canal of canais; let i = index">
+        <div class="list-canal-id">
+          <span class="txt-id-canal">ID: </span>
+          <span class="txt-id-number">{{ i }}</span>
+        </div> 
+
+        <div class="list-canal-name">{{ canal }}</div>
+
+        <button type="button" (click)="deleteMe(i)" class="button-delete-canal" alt="Deseja excluir esse canal?" title="Deseja excluir esse canal?">X</button>
+      </li>
+    </ul>
+
+    <div class="row" *ngIf="msgEmptyListCanais">
+      <div class="fl">
+        <img src="../../../../assets/images/icons/sad.svg" class="icon-no-canais-reg" />
+      </div>
+      
+      <div class="fl">
+        <span class="txt-no-canais-reg">Não há registros de Canais cadastrados.</span><br/><br/>
+
+        <span class="txt-novo-canal">Deseja cadastrar um novo Canal?</span>
+  
+        <div class="row">
+          <a routerLink="/canais/adicionar" class="button black-button fl button-cadastrar-novo-canal">Cadastrar Novo Canal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

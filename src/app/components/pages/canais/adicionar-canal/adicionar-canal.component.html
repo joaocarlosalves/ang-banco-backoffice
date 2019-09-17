@@ -1,0 +1,50 @@
+<div class="row">
+  <h1>Adicionar Canal</h1>
+
+  <div class="col col-50" *ngIf="showFormNovoCanal" showFormNovoCanal="true" #showFormNovoCanal ng-model="showFormNovoCanal">
+    <form id="form" class="row">
+      <div class="row line-input">
+        <label class="label">Nome do novo Canal</label>
+        <input type="text" name="nameCanal" #nameCanal ng-model="nameCanal" class="input-text" placeholder="Ex.: Internet Bank 2019" />
+      </div>
+          
+      <button 
+        type="button"
+        class="button black-button fr" 
+        alt="Sim! Desejo cadastrar o novo Canal!" 
+        title="Sim! Desejo cadastrar o novo Canal!" (click)="novoCanal()">Cadastrar Canal</button>
+
+      <a 
+        class="button fl white-button button-back-page" 
+        alt="Sim! Desejo voltar para a lista de Canais!" 
+        title="Sim! Desejo voltar para a lista de Canais!"
+        routerLink="/canais">Voltar para a lista de Canais</a>
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="msgInsertSuccess" *ngIf="msgInsertSuccess" msgInsertSuccess="false" #msgInsertSuccess ng-model="msgInsertSuccess">
+      <div class="row">
+        <div class="fl">
+          <img src="../../../../assets/images/icons/happy.svg" class="icon-no-canais-reg" />
+        </div>
+        
+        <div class="fl col-75">
+          <span class="txt-no-canais-reg">Canal cadastrado com sucesso!</span><br/><br/>
+  
+          <span class="txt-novo-canal">Deseja cadastrar um novo Canal? Ou voltar para a lista?</span>
+    
+          <div class="row">
+            <a 
+              class="button fl white-button button-back-page button-back-page-novo-canal" 
+              alt="Sim! Desejo voltar para a lista de Canais!" 
+              title="Sim! Desejo voltar para a lista de Canais!"
+              routerLink="/canais">Voltar para a lista de Canais</a>
+
+            <button (click)="cadastrarNovamente()" class="button black-button fl button-cadastrar-novo-canal">Cadastrar Novo Canal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

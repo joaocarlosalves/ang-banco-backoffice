@@ -1,0 +1,33 @@
+<section class="container-login" #containerLogin ng-model="containerLogin" *ngIf="containerLogin" containerLogin="true">
+  <div class="center-container">
+    <div class="row">
+      <div class="col col-50">
+        <img src="../../../../assets/images/logo-branco.png" class="logo-login" />
+      </div>
+
+      <form #formLogin id="form-login" class="form-login col col-50">
+        <span class="tit-login fl row">HYB</span>
+
+        <div #showForm *ngIf="showForm" showForm="true">
+          <div class="line-input-login row">
+            <label class="label-login">Matricula</label>
+            <input type="text" name="matricula-login" class="input-text-login" placeholder="Insira aqui sua matricula e senha abaixo para efetuar o login" />
+          </div>
+
+          <div class="line-input row">
+            <label class="label-login">Senha</label>
+            <input type="password" name="matricula-senha" class="input-text-login" placeholder="" />
+          </div>
+
+          <div class="line-input row">
+            <button type="button" class="button white-button button-login fl" (click)="doLogin()">Entrar</button>
+          </div>
+        </div>
+
+        <div class="msgLogin" *ngIf="showMsgLogin" showMsgLogin="false" #showMsg ng-model="msgLogin">
+          {{ msgLogin }}
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

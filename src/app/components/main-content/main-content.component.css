@@ -1,0 +1,15 @@
+.container-main-content {
+  width: 75%;
+  float: right;
+}
+
+.main-content {
+  background: white;
+  width: 88%;
+  padding: 3%;
+  float: left;
+  margin: 3% 0 0 3%;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}

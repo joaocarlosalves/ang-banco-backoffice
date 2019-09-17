@@ -1,0 +1,55 @@
+<div class="row">
+  <h1>Adicionar Evento</h1>
+
+  <div class="col col-50" *ngIf="showFormNovoEvento" showFormNovoEvento="true" #showFormNovoEvento ng-model="showFormNovoEvento">
+    <form id="form" class="row">
+      <div class="row line-input">
+        <label class="label">Nome do novo Evento</label>
+        <input type="text" name="nameEvento" #nameEvento ng-model="nameEvento" class="input-text" placeholder="Ex.: Reunião de gerentes Jan/2019" />
+      </div>
+      
+      <div class="row line-input">
+        <label class="label">Data do novo Evento</label>
+        <input type="text" name="dataEvento" #nameEvento ng-model="dataEvento" class="input-text" placeholder="Ex.:22/11/2019" />
+      </div>
+          
+      <button 
+        type="button"
+        class="button black-button fr" 
+        alt="Sim! Desejo cadastrar o novo Evento!" 
+        title="Sim! Desejo cadastrar o novo Evento!" (click)="novoEvento()">Cadastrar Evento</button>
+
+      <a 
+        class="button fl white-button button-back-page" 
+        alt="Sim! Desejo voltar para a lista de Eventos!" 
+        title="Sim! Desejo voltar para a lista de Eventos!"
+        routerLink="/eventos">Voltar para a lista de Eventos</a>
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="msgInsertSuccess" *ngIf="msgInsertSuccess" msgInsertSuccess="false" #msgInsertSuccess ng-model="msgInsertSuccess">
+      <div class="row">
+        <div class="col-15">
+          <img src="../../../../assets/images/icons/happy.svg" class="icon-no-eventos-reg" />
+        </div>
+        
+        <div class="fl col col-75">
+          <span class="txt-no-eventos-reg">Evento cadastrado com sucesso!</span><br/><br/>
+  
+          <span class="txt-novo-evento">Deseja cadastrar um novo Evento? Ou voltar para a lista?</span>
+    
+          <div class="col-75">
+            <a 
+              class="button fl white-button button-back-page button-back-page-novo-evento" 
+              alt="Sim! Desejo voltar para a lista de Eventos!" 
+              title="Sim! Desejo voltar para a lista de Eventos!"
+              routerLink="/eventos">Voltar para a lista de Eventos</a>
+
+            <button (click)="cadastrarNovamente()" class="button black-button fl button-cadastrar-novo-evento">Cadastrar Novo Evento</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

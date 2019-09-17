@@ -1,0 +1,44 @@
+.container-alert-responsive { 
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: #E9222A;
+}
+
+.old-computer {
+  float: right;
+  margin-top: 100px;
+}
+
+.tit-responsive {
+  color: rgba(255, 255, 255, .9);
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  text-align: left;
+  margin: 80px 0 80px 0;
+  width: 90%;
+  clear: both;
+  float: left;
+}
+
+
+.logo-login {
+  float: left;
+  margin-top: 120px;
+  width: 300px;
+}
+
+.old-computer {
+  width: 300px;
+  margin: 100px 50px 0 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .container-alert-responsive { 
+    display: block;
+  }
+}

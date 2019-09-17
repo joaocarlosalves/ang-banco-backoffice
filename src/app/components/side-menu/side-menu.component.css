@@ -1,0 +1,103 @@
+
+/* Side Menu */
+.container-side-menu {
+  background: #5A5A59;
+  width: 25%;
+  height: 100%;
+  top: 180px;
+  bottom: 0;
+  z-index: 0;
+  position: absolute;
+  padding-top: 40px;
+}
+
+.container-side-menu nav {
+  float: right;
+  width: 73%;
+}
+
+.container-side-menu nav ul {
+  float: left;
+  width: 100%;
+}
+
+.container-side-menu nav ul li {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, .8);
+}
+
+.container-side-menu nav ul li.menu-active {
+  font-weight: bold;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#595959+0,919191+100 */
+  background: #595959; /* Old browsers */
+  background: -moz-linear-gradient(left, #595959 0%, #919191 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #595959 0%,#919191 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #595959 0%,#919191 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#595959', endColorstr='#919191',GradientType=1 ); /* IE6-9 */
+}
+
+.container-side-menu nav ul li.menu-active > a::before {
+  content: '⯈ ';
+  color: white;
+  font-size: 20px;
+}
+
+.container-side-menu nav ul li a {
+  float: left;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  color: white;
+  font-size: 20px;
+  padding: 0 0 0 30px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+.container-side-menu nav ul li ul {
+  float: right;
+  width: 80%;
+}
+
+
+.container-side-menu nav ul li ul li a {
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 50px;
+}
+
+.container-side-menu nav ul li ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, .8);
+}
+
+.container-side-menu nav ul li ul li:last-child {
+  border-bottom: none;
+}
+
+.container-side-menu nav ul li ul li a {
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.container-side-menu nav ul li ul li.sub-menu-active a::after {
+  content: ' ⯇';
+  color: white;
+  font-size: 17px;
+}
+
+.container-side-menu nav ul li ul li.sub-menu-active a::after:hover {
+  font-weight: normal;
+}
+
+
+.container-side-menu nav ul li:hover,
+.container-side-menu nav ul li ul li a:hover {
+  font-weight: bold;
+}

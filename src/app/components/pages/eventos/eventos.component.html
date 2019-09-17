@@ -1,0 +1,36 @@
+<div class="row">
+  <h1>Lista de Eventos</h1>
+
+  <div class="col-96">
+    <ul class="list-eventos" ng-model="eventos" *ngIf="msgEmptyListEventos === false">
+      <li *ngFor="let evento of eventos; let i = index">
+        <div class="list-evento-id">
+          <span class="txt-id-evento">ID: </span>
+          <span class="txt-id-number">{{ i }}</span>
+        </div> 
+
+        <div class="list-evento-name">{{ evento }}</div>
+        
+        <div class="date-event"><img src="../../../../assets/images/icons/date.svg" /> {{ dataEventos[i] }}</div>
+
+        <button type="button" (click)="deleteMe(i)" class="button-delete-evento" alt="Deseja excluir esse evento?" title="Deseja excluir esse evento?">X</button>
+      </li>
+    </ul>
+
+    <div class="row" *ngIf="msgEmptyListEventos">
+      <div class="fl">
+        <img src="../../../../assets/images/icons/sad.svg" class="icon-no-eventos-reg" />
+      </div>
+      
+      <div class="fl">
+        <span class="txt-no-eventos-reg">Não há registros de eventos cadastrados.</span><br/><br/>
+
+        <span class="txt-novo-evento">Deseja cadastrar um novo evento?</span>
+  
+        <div class="row">
+          <a routerLink="/eventos/adicionar" class="button black-button fl button-cadastrar-novo-evento">Cadastrar Novo evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

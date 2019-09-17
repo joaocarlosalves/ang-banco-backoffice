@@ -1,0 +1,117 @@
+
+/* Header */
+.main-header {
+  background: #E9222A;
+  height: 100px;
+}
+
+.container-logo {
+  width: 15%;
+  min-width: 300px;
+  height: 40px;
+  margin: 30px 0 20px 0;
+}
+
+.container-logo img {
+  height: 100%;
+}
+
+
+.container-title-component {
+  width: 50%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  float: left;
+  margin-top: 25px;
+  padding: 20px 0 25px 0;
+  border-bottom: 10px solid rgba(255, 255, 255, 0.4); 
+}
+
+.container-user-main-menu {
+  float: left;
+  width: 20%;
+  height: 60px;
+  margin: 20px 0 20px 50px;
+}
+
+.container-user-main-menu button {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 8px 5px 5px 0;
+  border: none;
+  background: transparent;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.container-user-main-menu button:hover {
+  transform: scale(.8);
+}
+
+.container-user-main-menu button span {
+  float: left;
+  width: 100%;
+  height: 5px;
+  margin-bottom: 7px;
+  border-radius: 10px;
+  background: white;
+}
+
+.button-header-user-name {
+  color: white;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  height: 60px;
+  line-height: 55px;
+  text-align: left;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  padding: 0 15px;
+  border: 1px dotted transparent;
+}
+
+.button-header-user-name:hover { 
+  transform: scale(.8);
+  border: 2px solid rgba(255, 255, 255, .8);
+  border-radius: 10px;
+  background:  rgba(255, 255, 255, .2);
+}
+
+.button-header-exit {
+  float: right;
+  color: white;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 20px;
+  text-align: right;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  border: 1px dotted transparent;
+  letter-spacing: 2px;
+}
+
+.button-header-exit:hover {
+  transform: scale(.8);
+  border-bottom: 1px solid white;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .container-user-main-menu {
+    margin: 20px 0 20px 30px;
+  }
+
+  .container-logo {
+    width: 12%;
+    min-width: 250px;
+  }
+
+  .container-logo img {
+    height: 93%;
+  }
+}
